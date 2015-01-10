@@ -1,4 +1,5 @@
 #include <pebble.h>
+#include "pill-reminder.c"
   //alexis commit
 
 static Window *window;
