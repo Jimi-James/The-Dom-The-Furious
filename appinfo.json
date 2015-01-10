@@ -1,18 +1,38 @@
 {
-    "appKeys": {
-        "dummy": 0
-    },
+    "appKeys": {},
     "capabilities": [
-        "configurable"
+        ""
     ],
-    "companyName": "MakeAwesomeHappen",
-    "longName": "The-Dom-The-Furious",
-    "projectType": "native",
+    "companyName": "jimijames.bove@gmail.com",
+    "longName": "arg",
+    "projectType": "pebblejs",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/menu_icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            }
+        ]
     },
-    "shortName": "The-Dom-The-Furious",
-    "uuid": "2e7eacc5-19cd-46c6-8a86-36b35749faea",
+    "shortName": "arg",
+    "uuid": "36922c46-fd52-4db9-b6bb-4a8ae3ce1d91",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
