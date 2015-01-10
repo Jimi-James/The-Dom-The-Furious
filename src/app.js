@@ -11,7 +11,27 @@ var main = new UI.Card({
   title: 'Pebble.js',
   icon: 'images/menu_icon.png',
   subtitle: '',
-  body: 'Press UP Button for your the Pill List.\nPress SELECT (middle) Button for Contacts.\nPress DOWN button for Goals.\nHold SELECT for emergencies.'
+  body: 'UP: Medication(s)\nMIDDLE: Contacts\nDOWN: Goals\n\nHOLD MIDDLE\nFOR EMERGENCY'
+});
+
+main.on('longClick', 'select', function(e) {
+  var menu = new UI.Menu({
+    sections: [{
+      items: [{
+        title: 'Pebble.js',
+        icon: 'images/menu_icon.png',
+        subtitle: 'Can do Menus'
+      }, {
+        title: 'Second Item',
+        subtitle: 'Subtitle Text'
+      }]
+    }]
+  });
+  menu.on('select', function(e) {
+    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    console.log('The item is titled "' + e.item.title + '"');
+  });
+  menu.show();
 });
 
 main.show();
@@ -33,6 +53,25 @@ main.on('click', 'up', function(e) {
     console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
     console.log('The item is titled "' + e.item.title + '"');
   });
+  menu.on('longSelect', function(e) {
+    var menu = new UI.Menu({
+      sections: [{
+        items: [{
+          title: 'Pebble.js',
+          icon: 'images/menu_icon.png',
+          subtitle: 'Can do Menus'
+        }, {
+          title: 'Second Item',
+          subtitle: 'Subtitle Text'
+        }]
+      }]
+    });
+    menu.on('select', function(e) {
+      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+      console.log('The item is titled "' + e.item.title + '"');
+    });
+    menu.show();
+  });
   menu.show();
 });
 
@@ -53,25 +92,24 @@ main.on('click', 'select', function(e) {
     console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
     console.log('The item is titled "' + e.item.title + '"');
   });
-  menu.show();
-});
-
-main.on('longSelect', function(e) {
-  var menu = new UI.Menu({
-    sections: [{
-      items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
-        subtitle: 'Can do Menus'
-      }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+  menu.on('longSelect', function(e) {
+    var menu = new UI.Menu({
+      sections: [{
+        items: [{
+          title: 'Pebble.js',
+          icon: 'images/menu_icon.png',
+          subtitle: 'Can do Menus'
+        }, {
+          title: 'Second Item',
+          subtitle: 'Subtitle Text'
+        }]
       }]
-    }]
-  });
-  menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    });
+    menu.on('select', function(e) {
+      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+      console.log('The item is titled "' + e.item.title + '"');
+    });
+    menu.show();
   });
   menu.show();
 });
@@ -92,6 +130,25 @@ main.on('click', 'down', function(e) {
   menu.on('select', function(e) {
     console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
     console.log('The item is titled "' + e.item.title + '"');
+  });
+  menu.on('longSelect', function(e) {
+    var menu = new UI.Menu({
+      sections: [{
+        items: [{
+          title: 'Pebble.js',
+          icon: 'images/menu_icon.png',
+          subtitle: 'Can do Menus'
+        }, {
+          title: 'Second Item',
+          subtitle: 'Subtitle Text'
+        }]
+      }]
+    });
+    menu.on('select', function(e) {
+      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+      console.log('The item is titled "' + e.item.title + '"');
+    });
+    menu.show();
   });
   menu.show();
 });
