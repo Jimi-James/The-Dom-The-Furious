@@ -56,17 +56,24 @@ main.on('click', 'select', function(e) {
   menu.show();
 });
 
-main.on('click', 'longSelect', function(e) {
-  var wind = new UI.Window();
-  var textfield = new UI.Text({
-    position: new Vector2(0, 50),
-    size: new Vector2(144, 30),
-    font: 'gothic-24-bold',
-    text: 'Text Anywhere!',
-    textAlign: 'center'
+main.on('longSelect', function(e) {
+  var menu = new UI.Menu({
+    sections: [{
+      items: [{
+        title: 'Pebble.js',
+        icon: 'images/menu_icon.png',
+        subtitle: 'Can do Menus'
+      }, {
+        title: 'Second Item',
+        subtitle: 'Subtitle Text'
+      }]
+    }]
   });
-  wind.add(textfield);
-  wind.show();
+  menu.on('select', function(e) {
+    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    console.log('The item is titled "' + e.item.title + '"');
+  });
+  menu.show();
 });
 
 main.on('click', 'down', function(e) {
