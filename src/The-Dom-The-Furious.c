@@ -1,20 +1,27 @@
 #include <pebble.h>
-#include "pill-reminder.c"
   //alexis commit
 
 static Window *window;
 static TextLayer *text_layer;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(text_layer, "Select");
+  deinit();
+  contacts_init();
+}
+
+static void select_long_click_handler(ClickRecognizerRef recognizer, void *context) {
+  deinit();
+  emergency_init();
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(text_layer, "Up");
+  deinit();
+  pills_init();
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(text_layer, "Down");
+  deinit();
+  goals_init();
 }
 
 static void click_config_provider(void *context) {
@@ -28,7 +35,7 @@ static void window_load(Window *window) {
   GRect bounds = layer_get_bounds(window_layer);
 
   text_layer = text_layer_create((GRect) { .origin = { 0, 72 }, .size = { bounds.size.w, 20 } });
-  text_layer_set_text(text_layer, "Press UP Button for your the Pill List.\nPress SELECT (middle) Button for Contacts.\nPress DOWN button for Goals.");
+  text_layer_set_text(text_layer, "Press UP Button for your the Pill List.\nPress SELECT (middle) Button for Contacts.\nPress DOWN button for Goals.\nHold SELECT for emergencies.");
   text_layer_set_text_alignment(text_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_layer));
 }
