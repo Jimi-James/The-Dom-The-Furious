@@ -5,23 +5,19 @@ static Window *window;
 static TextLayer *text_layer;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  deinit();
-  contacts_init();
+ // Check which window is currently running and switch to appropriate window
 }
 
 static void select_long_click_handler(ClickRecognizerRef recognizer, void *context) {
-  deinit();
-  emergency_init();
+ // Check which window is currently running and switch to appropriate window
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  deinit();
-  pills_init();
+ // Check which window is currently running and switch to appropriate window
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
-  deinit();
-  goals_init();
+ // Check which window is currently running and switch to appropriate window
 }
 
 static void click_config_provider(void *context) {
