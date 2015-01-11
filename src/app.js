@@ -232,3 +232,24 @@ main.on('click', 'down', function(e) {
   });
   menu.show();
 });
+
+
+
+var options = {};
+
+Pebble.addEventListener('showConfiguration', function(e) {
+  // Show config page
+  Pebble.openURL('http://people.ucsc.edu/~jamaruiz/');
+});
+
+Pebble.addEventListener("webviewclosed", function(e) {
+  console.log("configuration closed");
+  // webview closed
+  //Using primitive JSON validity and non-empty check
+  if (e.response.charAt(0) == "{" && e.response.slice(-1) == "}" && e.response.length > 5) {
+    options = JSON.parse(decodeURIComponent(e.response));
+    console.log("Options = " + JSON.stringify(options));
+  } else {
+    console.log("Cancelled");
+  }
+});
