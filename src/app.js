@@ -67,10 +67,12 @@ main.on('click', 'up', function(e) {
     });
     card.on('click', 'up', function(e) {
       taken = '\nHAS been taken.';
+      card.body = e.item.body + taken + '\nUP: taken\nDOWN: not taken';
       card.show();
     });
     card.on('click', 'down', function(e) {
       taken = '\nHas NOT been taken.';
+      card.body = e.item.body + taken + '\nUP: taken\nDOWN: not taken';
       card.show();
     });
     card.show();
@@ -187,10 +189,12 @@ main.on('click', 'down', function(e) {
     });
     card.on('click', 'up', function(e) {
       done = '\nHAS been done.';
+      card.body = 'Do ' + e.item.subtitle + done + '\nUP: done\nDOWN: not done';
       card.show();
     });
     card.on('click', 'down', function(e) {
       done = '\nHas NOT been done.';
+      card.body = 'Do ' + e.item.subtitle + done + '\nUP: done\nDOWN: not done';
       card.show();
     });
     card.show();
