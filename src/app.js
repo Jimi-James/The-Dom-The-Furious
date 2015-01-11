@@ -12,10 +12,10 @@ main.on('longClick', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'GPS Coords Sent'
+        title: 'GPS Coords Sent',
         subtitle: 'To Police & EMTs'
       }, {
-        title: 'Suicide Hotline'
+        title: 'Suicide Hotline',
         subtitle: '(xxx)xxx-xxxx'
       }, {
         title: 'Help Helperson',
@@ -61,10 +61,10 @@ main.on('click', 'up', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'GPS Coords Sent'
+          title: 'GPS Coords Sent',
           subtitle: 'To Police & EMTs'
         }, {
-          title: 'Suicide Hotline'
+          title: 'Suicide Hotline',
           subtitle: '(xxx)xxx-xxxx'
         }, {
           title: 'Help Helperson',
@@ -110,10 +110,10 @@ main.on('click', 'select', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'GPS Coords Sent'
+          title: 'GPS Coords Sent',
           subtitle: 'To Police & EMTs'
         }, {
-          title: 'Suicide Hotline'
+          title: 'Suicide Hotline',
           subtitle: '(xxx)xxx-xxxx'
         }, {
           title: 'Help Helperson',
@@ -160,10 +160,10 @@ main.on('click', 'down', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'GPS Coords Sent'
+          title: 'GPS Coords Sent',
           subtitle: 'To Police & EMTs'
         }, {
-          title: 'Suicide Hotline'
+          title: 'Suicide Hotline',
           subtitle: '(xxx)xxx-xxxx'
         }, {
           title: 'Help Helperson',
