@@ -30,8 +30,11 @@ main.on('longClick', 'select', function(e) {
     }]
   });
   menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    var card = new UI.Card({
+      title: 'Calling',
+      body: concat (e.item.title, '\n', e.item.subtitle);
+    });
+    card.show();
   });
   menu.show();
 });
@@ -43,19 +46,32 @@ main.on('click', 'up', function(e) {
     sections: [{
       items: [{
         title: 'Prozac',
-        subtitle: '8:00PM, taken'
+        subtitle: '8:00PM'
+        body: 'Dosage Info:\nTake X nightly.'
       }, {
         title: 'Cymbalta',
-        subtitle: '8:00PM, not taken'
+        subtitle: '8:00PM'
+        body: 'Dosage Info:\nTake X nightly.'
       }, {
         title: 'Motrin',
-        subtitle: '8:00AM, taken'
+        subtitle: '8:00AM'
+        body: 'Dosage Info:\nTake 1/2 cup daily until not sick.'
       }]
     }]
   });
   menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    var taken = 'HAS been taken.';
+    var card = new UI.Card({
+      title: e.item.title,
+      body: concat (e.item.body, taken, '\nUP: taken\nDOWN: not taken')
+    });
+    card.on('click', 'up', function(e) {
+      taken = 'HAS been taken.';
+    }
+    card.on('click', 'down', function(e) {
+      taken = 'Has NOT been taken.';
+    }
+    card.show();
   });
   menu.on('longSelect', function(e) {
     var menu = new UI.Menu({
@@ -79,8 +95,11 @@ main.on('click', 'up', function(e) {
       }]
     });
     menu.on('select', function(e) {
-      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-      console.log('The item is titled "' + e.item.title + '"');
+      var card = new UI.Card({
+        title: 'Calling',
+        body: concat (e.item.title, '\n', e.item.subtitle);
+      });
+      card.show();
     });
     menu.show();
   });
@@ -103,8 +122,11 @@ main.on('click', 'select', function(e) {
     }]
   });
   menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    var card = new UI.Card({
+      title: 'Calling',
+      body: concat (e.item.title, '\n', e.item.subtitle);
+    });
+    card.show();
   });
   menu.on('longSelect', function(e) {
     var menu = new UI.Menu({
@@ -129,8 +151,11 @@ main.on('click', 'select', function(e) {
       }]
     });
     menu.on('select', function(e) {
-      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-      console.log('The item is titled "' + e.item.title + '"');
+      var card = new UI.Card({
+        title: 'Calling',
+        body: concat (e.item.title, '\n', e.item.subtitle);
+      });
+      card.show();
     });
     menu.show();
   });
@@ -153,8 +178,18 @@ main.on('click', 'down', function(e) {
     }]
   });
   menu.on('select', function(e) {
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    var done = 'HAS been done.';
+    var card = new UI.Card({
+      title: e.item.title,
+      body: concat ('Do ', e.item.subtitle, done, '\nUP: done\nDOWN: not done')
+    });
+    card.on('click', 'up', function(e) {
+      done = 'HAS been done.';
+    }
+    card.on('click', 'down', function(e) {
+      done = 'Has NOT been done.';
+    }
+    card.show();
   });
   menu.on('longSelect', function(e) {
     var menu = new UI.Menu({
@@ -179,8 +214,11 @@ main.on('click', 'down', function(e) {
       }]
     });
     menu.on('select', function(e) {
-      console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-      console.log('The item is titled "' + e.item.title + '"');
+      var card = new UI.Card({
+        title: 'Calling',
+        body: concat (e.item.title, '\n', e.item.subtitle);
+      });
+      card.show();
     });
     menu.show();
   });
