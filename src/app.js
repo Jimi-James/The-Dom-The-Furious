@@ -1,15 +1,9 @@
-/**
- * Welcome to Pebble.js!
- *
- * This is where you write your app.
- */
-
 var UI = require('ui');
 var Vector2 = require('vector2');
 
 var main = new UI.Card({
   title: 'Check-In',
-  icon: 'images/menu_icon.png',
+  icon: 'images/logo copy.png',
   subtitle: '',
   body: 'UP: Medication(s)\nMIDDLE: Contacts\nDOWN: Goals\n\nHOLD MIDDLE\nFOR EMERGENCY'
 });
@@ -18,8 +12,8 @@ main.on('longClick', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
+        title: 'Check-In',
+        icon: 'images/logo copy.png',
         subtitle: 'Can do Menus'
       }, {
         title: 'Second Item',
@@ -40,8 +34,8 @@ main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
+        title: 'Check-In',
+        icon: 'images/logo copy.png',
         subtitle: 'Can do Menus'
       }, {
         title: 'Second Item',
@@ -57,8 +51,8 @@ main.on('click', 'up', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Pebble.js',
-          icon: 'images/menu_icon.png',
+          title: 'Check-In',
+          icon: 'images/logo copy.png',
           subtitle: 'Can do Menus'
         }, {
           title: 'Second Item',
@@ -79,8 +73,8 @@ main.on('click', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
+        title: 'Check-In',
+        icon: 'images/logo copy.png',
         subtitle: 'Can do Menus'
       }, {
         title: 'Second Item',
@@ -96,8 +90,8 @@ main.on('click', 'select', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Pebble.js',
-          icon: 'images/menu_icon.png',
+          title: 'Check-In',
+          icon: 'images/logo copy.png',
           subtitle: 'Can do Menus'
         }, {
           title: 'Second Item',
@@ -118,8 +112,8 @@ main.on('click', 'down', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
-        icon: 'images/menu_icon.png',
+        title: 'Check-In',
+        icon: 'images/logo copy.png',
         subtitle: 'Can do Menus'
       }, {
         title: 'Second Item',
@@ -135,8 +129,8 @@ main.on('click', 'down', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Pebble.js',
-          icon: 'images/menu_icon.png',
+          title: 'Check-In',
+          icon: 'images/logo copy.png',
           subtitle: 'Can do Menus'
         }, {
           title: 'Second Item',
