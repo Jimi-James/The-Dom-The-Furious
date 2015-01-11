@@ -8,7 +8,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var main = new UI.Card({
-  title: 'Pebble.js',
+  title: 'Check-In',
   icon: 'images/menu_icon.png',
   subtitle: '',
   body: 'UP: Medication(s)\nMIDDLE: Contacts\nDOWN: Goals\n\nHOLD MIDDLE\nFOR EMERGENCY'
