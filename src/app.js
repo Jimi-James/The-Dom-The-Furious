@@ -16,7 +16,7 @@ main.on('longClick', 'select', function(e) {
         subtitle: 'To Police & EMTs'
       }, {
         title: 'Suicide Hotline',
-        subtitle: '(xxx)xxx-xxxx'
+        subtitle: '1-800-273-8255'
       }, {
         title: 'Help Helperson',
         subtitle: '(555)555-5555'
@@ -32,7 +32,7 @@ main.on('longClick', 'select', function(e) {
   menu.on('select', function(e) {
     var card = new UI.Card({
       title: 'Calling',
-      body: concat (e.item.title, '\n', e.item.subtitle);
+      body: e.item.title + '\n' + e.item.subtitle
     });
     card.show();
   });
@@ -46,31 +46,33 @@ main.on('click', 'up', function(e) {
     sections: [{
       items: [{
         title: 'Prozac',
-        subtitle: '8:00PM'
+        subtitle: '8:00PM',
         body: 'Dosage Info:\nTake X nightly.'
       }, {
         title: 'Cymbalta',
-        subtitle: '8:00PM'
+        subtitle: '8:00PM',
         body: 'Dosage Info:\nTake X nightly.'
       }, {
         title: 'Motrin',
-        subtitle: '8:00AM'
+        subtitle: '8:00AM',
         body: 'Dosage Info:\nTake 1/2 cup daily until not sick.'
       }]
     }]
   });
   menu.on('select', function(e) {
-    var taken = 'HAS been taken.';
+    var taken = '\nHAS been taken.';
     var card = new UI.Card({
       title: e.item.title,
-      body: concat (e.item.body, taken, '\nUP: taken\nDOWN: not taken')
+      body: e.item.body + taken + '\nUP: taken\nDOWN: not taken'
     });
     card.on('click', 'up', function(e) {
-      taken = 'HAS been taken.';
-    }
+      taken = '\nHAS been taken.';
+      card.show();
+    });
     card.on('click', 'down', function(e) {
-      taken = 'Has NOT been taken.';
-    }
+      taken = '\nHas NOT been taken.';
+      card.show();
+    });
     card.show();
   });
   menu.on('longSelect', function(e) {
@@ -81,7 +83,7 @@ main.on('click', 'up', function(e) {
           subtitle: 'To Police & EMTs'
         }, {
           title: 'Suicide Hotline',
-          subtitle: '(xxx)xxx-xxxx'
+          subtitle: '1-800-273-8255'
         }, {
           title: 'Help Helperson',
           subtitle: '(555)555-5555'
@@ -97,7 +99,7 @@ main.on('click', 'up', function(e) {
     menu.on('select', function(e) {
       var card = new UI.Card({
         title: 'Calling',
-        body: concat (e.item.title, '\n', e.item.subtitle);
+        body: e.item.title + '\n' + e.item.subtitle
       });
       card.show();
     });
@@ -124,7 +126,7 @@ main.on('click', 'select', function(e) {
   menu.on('select', function(e) {
     var card = new UI.Card({
       title: 'Calling',
-      body: concat (e.item.title, '\n', e.item.subtitle);
+      body: e.item.title + '\n' + e.item.subtitle
     });
     card.show();
   });
@@ -136,7 +138,7 @@ main.on('click', 'select', function(e) {
           subtitle: 'To Police & EMTs'
         }, {
           title: 'Suicide Hotline',
-          subtitle: '(xxx)xxx-xxxx'
+          subtitle: '1-800-273-8255'
         }, {
           title: 'Help Helperson',
           subtitle: '(555)555-5555'
@@ -153,7 +155,7 @@ main.on('click', 'select', function(e) {
     menu.on('select', function(e) {
       var card = new UI.Card({
         title: 'Calling',
-        body: concat (e.item.title, '\n', e.item.subtitle);
+        body: e.item.title + '\n' + e.item.subtitle
       });
       card.show();
     });
@@ -178,17 +180,19 @@ main.on('click', 'down', function(e) {
     }]
   });
   menu.on('select', function(e) {
-    var done = 'HAS been done.';
+    var done = '\nHAS been done.';
     var card = new UI.Card({
       title: e.item.title,
-      body: concat ('Do ', e.item.subtitle, done, '\nUP: done\nDOWN: not done')
+      body: 'Do ' + e.item.subtitle + done + '\nUP: done\nDOWN: not done'
     });
     card.on('click', 'up', function(e) {
-      done = 'HAS been done.';
-    }
+      done = '\nHAS been done.';
+      card.show();
+    });
     card.on('click', 'down', function(e) {
-      done = 'Has NOT been done.';
-    }
+      done = '\nHas NOT been done.';
+      card.show();
+    });
     card.show();
   });
   menu.on('longSelect', function(e) {
@@ -199,7 +203,7 @@ main.on('click', 'down', function(e) {
           subtitle: 'To Police & EMTs'
         }, {
           title: 'Suicide Hotline',
-          subtitle: '(xxx)xxx-xxxx'
+          subtitle: '1-800-273-8255'
         }, {
           title: 'Help Helperson',
           subtitle: '(555)555-5555'
@@ -216,7 +220,7 @@ main.on('click', 'down', function(e) {
     menu.on('select', function(e) {
       var card = new UI.Card({
         title: 'Calling',
-        body: concat (e.item.title, '\n', e.item.subtitle);
+        body: e.item.title + '\n' + e.item.subtitle
       });
       card.show();
     });
