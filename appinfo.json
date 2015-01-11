@@ -4,7 +4,7 @@
         "configurable"
     ],
     "companyName": "jimijames.bove@gmail.com",
-    "longName": "arg",
+    "longName": "Check-In",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -36,7 +36,7 @@
             }
         ]
     },
-    "shortName": "arg",
+    "shortName": "Check-In",
     "uuid": "36922c46-fd52-4db9-b6bb-4a8ae3ce1d91",
     "versionCode": 1,
     "versionLabel": "1.0",
