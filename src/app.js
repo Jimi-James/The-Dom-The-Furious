@@ -12,12 +12,20 @@ main.on('longClick', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Check-In',
-        icon: 'images/logo copy.png',
-        subtitle: 'Can do Menus'
+        title: 'GPS Coords Sent'
+        subtitle: 'To Police & EMTs'
       }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+        title: 'Suicide Hotline'
+        subtitle: '(xxx)xxx-xxxx'
+      }, {
+        title: 'Help Helperson',
+        subtitle: '(555)555-5555'
+      }, {
+        title: 'John Bestfriend',
+        subtitle: '(707)555-5555'
+      }, {
+        title: 'Mom',
+        subtitle: '(707)555-5554'
       }]
     }]
   });
@@ -34,12 +42,14 @@ main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Check-In',
-        icon: 'images/logo copy.png',
-        subtitle: 'Can do Menus'
+        title: 'Prozac',
+        subtitle: '8:00PM, taken'
       }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+        title: 'Cymbalta',
+        subtitle: '8:00PM, not taken'
+      }, {
+        title: 'Motrin',
+        subtitle: '8:00AM, taken'
       }]
     }]
   });
@@ -51,12 +61,20 @@ main.on('click', 'up', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Check-In',
-          icon: 'images/logo copy.png',
-          subtitle: 'Can do Menus'
+          title: 'GPS Coords Sent'
+          subtitle: 'To Police & EMTs'
         }, {
-          title: 'Second Item',
-          subtitle: 'Subtitle Text'
+          title: 'Suicide Hotline'
+          subtitle: '(xxx)xxx-xxxx'
+        }, {
+          title: 'Help Helperson',
+          subtitle: '(555)555-5555'
+        }, {
+          title: 'John Bestfriend',
+          subtitle: '(707)555-5555'
+        }, {
+          title: 'Mom',
+          subtitle: '(707)555-5554'
         }]
       }]
     });
@@ -73,12 +91,14 @@ main.on('click', 'select', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Check-In',
-        icon: 'images/logo copy.png',
-        subtitle: 'Can do Menus'
+        title: 'Help Helperson',
+        subtitle: '(555)555-5555'
       }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+        title: 'John Bestfriend',
+        subtitle: '(707)555-5555'
+      }, {
+        title: 'Mom',
+        subtitle: '(707)555-5554'
       }]
     }]
   });
@@ -90,13 +110,22 @@ main.on('click', 'select', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Check-In',
-          icon: 'images/logo copy.png',
-          subtitle: 'Can do Menus'
+          title: 'GPS Coords Sent'
+          subtitle: 'To Police & EMTs'
         }, {
-          title: 'Second Item',
-          subtitle: 'Subtitle Text'
+          title: 'Suicide Hotline'
+          subtitle: '(xxx)xxx-xxxx'
+        }, {
+          title: 'Help Helperson',
+          subtitle: '(555)555-5555'
+        }, {
+          title: 'John Bestfriend',
+          subtitle: '(707)555-5555'
+        }, {
+          title: 'Mom',
+          subtitle: '(707)555-5554'
         }]
+
       }]
     });
     menu.on('select', function(e) {
@@ -112,12 +141,14 @@ main.on('click', 'down', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Check-In',
-        icon: 'images/logo copy.png',
-        subtitle: 'Can do Menus'
+        title: 'Take out trash',
+        subtitle: 'By bedtime'
       }, {
-        title: 'Second Item',
-        subtitle: 'Subtitle Text'
+        title: 'Finish Pebble app',
+        subtitle: 'Sunday 2:00PM'
+      }, {
+        title: 'Make dinner',
+        subtitle: '6:00PM'
       }]
     }]
   });
@@ -129,13 +160,22 @@ main.on('click', 'down', function(e) {
     var menu = new UI.Menu({
       sections: [{
         items: [{
-          title: 'Check-In',
-          icon: 'images/logo copy.png',
-          subtitle: 'Can do Menus'
+          title: 'GPS Coords Sent'
+          subtitle: 'To Police & EMTs'
         }, {
-          title: 'Second Item',
-          subtitle: 'Subtitle Text'
+          title: 'Suicide Hotline'
+          subtitle: '(xxx)xxx-xxxx'
+        }, {
+          title: 'Help Helperson',
+          subtitle: '(555)555-5555'
+        }, {
+          title: 'John Bestfriend',
+          subtitle: '(707)555-5555'
+        }, {
+          title: 'Mom',
+          subtitle: '(707)555-5554'
         }]
+
       }]
     });
     menu.on('select', function(e) {
